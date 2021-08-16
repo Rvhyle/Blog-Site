@@ -18,8 +18,6 @@ function App() {
       setBlogs(blogCollection);
       setFetching(false);
     }, 800);
-
-    console.log(blogs);
   }, [fetching]);
 
   return (

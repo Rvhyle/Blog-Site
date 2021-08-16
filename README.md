@@ -4,5 +4,6 @@
 
 - Tailwind CSS
 - React Router
-- Lottie
+- Lotti
+- Moment JS
 - ReactJS

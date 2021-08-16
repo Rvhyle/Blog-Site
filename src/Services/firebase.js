@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyA891UI4IkgTvXKZLbKGkRDaaygxpVEGTU',
+  apiKey: process.env.FB_API,
   authDomain: 'blog-f2478.firebaseapp.com',
   projectId: 'blog-f2478',
   storageBucket: 'blog-f2478.appspot.com',

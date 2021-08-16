@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import './recentBlog_styles.css';
 import moment from 'moment';
 
@@ -10,7 +11,7 @@ export default function RecentBlog({ blogs }) {
 
   return (
     <div className='w-full'>
-      <div className='w-11/12 mx-auto flex items-center justify-around flex-wrap-reverse pt-36'>
+      <div className='w-11/12 mx-auto flex items-center justify-around flex-wrap-reverse md:pt-36'>
         <div className='title-container'>
           <h1 className='font-bold'>Recent Blog</h1>
           <h2 className='font-semibold'>{FormattedDate}</h2>
@@ -21,7 +22,9 @@ export default function RecentBlog({ blogs }) {
           <div className='recent-preview'>
             <h1>{blog.title}</h1>
             <Link to={`blog/${blog.id}`}>
-              <p className='recent-read-more'>Read More ➡</p>
+              <p className='recent-read-more'>
+                Read More <ChevronRightIcon />
+              </p>
             </Link>
           </div>
         </div>

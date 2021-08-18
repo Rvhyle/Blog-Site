@@ -1,9 +1,13 @@
 import React from 'react';
+import { useContext } from 'react';
+import { blogContext } from '../../App';
 import RecentBlog from '../../components/Recent Blog/RecentBlog';
 import BlogBox from '../../components/Blog Box/Blog_Box';
 import '../../stylesheets/homepage_styles.css';
 
-export default function HomePage({ blogs }) {
+export default function HomePage() {
+  const blogs = useContext(blogContext);
+
   return (
     <div>
       <RecentBlog blogs={blogs.slice(-1)} />

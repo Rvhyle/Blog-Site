@@ -1,12 +1,15 @@
 import React from 'react';
+import { useContext } from 'react';
+import { blogContext } from '../../App';
 import { Link } from 'react-router-dom';
 import './blogpage_styles.css';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { useParams } from 'react-router';
 
-export default function BlogPage({ blogs }) {
+export default function BlogPage() {
   const { id } = useParams();
+  const blogs = useContext(blogContext);
 
   return (
     <div>
